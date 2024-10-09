@@ -1,0 +1,1 @@
+const geminiKey = "AIzaSyCQEDH2eWe6HNeHsogZ9X0XwB3SH3WnPaE";
