@@ -22,7 +22,7 @@ final List<PageViewModel> onboardingScreenList = [
       textAlign: TextAlign.start, // Align the body to start
       style: TextStyle(fontSize: 20.rs,color: Colors.grey.shade600,fontWeight: FontWeight.w600),
     ),
-    image: Lottie.network("https://lottie.host/f5521ceb-7e25-4ab9-8823-d2c0bb17f692/jzeZmZLTLP.json"),
+    image: Lottie.network("https://lottie.host/f5521ceb-7e25-4ab9-8823-d2c0bb17f692/jzeZmZLTLP.json",height: 380.rs,width: 380.rs,fit: BoxFit.cover),
   ),
   PageViewModel(
     decoration: const PageDecoration(
@@ -38,23 +38,25 @@ final List<PageViewModel> onboardingScreenList = [
       textAlign: TextAlign.start, // Align the body to start
       style: TextStyle(fontSize: 20.rs,color: Colors.grey.shade600,fontWeight: FontWeight.w600),
     ),
-    image: Lottie.network("https://lottie.host/b817f45f-cf7a-41d7-ad63-cf29a7df04fb/aaatHEkHzY.json"),
+    image: Lottie.network("https://lottie.host/b817f45f-cf7a-41d7-ad63-cf29a7df04fb/aaatHEkHzY.json",height: 380.rs,width: 380.rs,fit: BoxFit.cover),
   ),
   PageViewModel(
     decoration: const PageDecoration(
       bodyAlignment: Alignment.centerLeft,
     ),
-    titleWidget: Text(
+    bodyWidget: Text(
       "Our AI predicts your future resource consumption and provides personalized suggestions.",
       textAlign: TextAlign.start,
-      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28.rs),
+      style: TextStyle(fontSize: 20.rs,color: Colors.grey.shade600,fontWeight: FontWeight.w600),
+
     ),
-    bodyWidget: Text(
+    titleWidget: Text(
       "Discover how you can reduce energy, cut waste, and save costs.",
       textAlign: TextAlign.start, // Align the body to start
-      style: TextStyle(fontSize: 20.rs,color: Colors.grey.shade600,fontWeight: FontWeight.w600),
+      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 28.rs),
+
     ),
-    image: Lottie.network("https://lottie.host/901bf8bc-96d6-46e0-a746-23d8c7e1e770/chbAXGV09h.json"),
+    image: Lottie.network("https://lottie.host/901bf8bc-96d6-46e0-a746-23d8c7e1e770/chbAXGV09h.json",height: 380.rs,width: 380.rs,fit: BoxFit.cover),
   ),
   PageViewModel(
     decoration: const PageDecoration(
@@ -70,7 +72,7 @@ final List<PageViewModel> onboardingScreenList = [
       textAlign: TextAlign.start,
       style: TextStyle(fontSize: 20.rs,color: Colors.grey.shade600,fontWeight: FontWeight.w600),
     ),
-    image: Lottie.network("https://lottie.host/e056ddf2-b3f1-4555-ba79-219a41b24438/hcor2DOetJ.json"),
+    image: Lottie.network("https://lottie.host/e056ddf2-b3f1-4555-ba79-219a41b24438/hcor2DOetJ.json",height: 500.rs,width: 500.rs),
   ),
   PageViewModel(
     decoration: const PageDecoration(

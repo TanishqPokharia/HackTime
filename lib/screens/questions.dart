@@ -5,6 +5,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hack_time/extensions.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+
+final userChoicesProvider = StateProvider<Map<String,dynamic>>((ref) {
+  return {};
+});
+
 class QuestionsScreen extends HookConsumerWidget {
   QuestionsScreen({super.key});
 
@@ -117,6 +122,7 @@ class QuestionsScreen extends HookConsumerWidget {
                         onTap: () {
                           log("Selected ${card.title}");
                           selectedOptions.value[questions[selectedIndex.value].topic] = card.title;
+                          ref.read(userChoicesProvider.notifier).update((state)=> selectedOptions.value);
                           // Update the selected card index
                           selectedCards.value = idx;
                         },

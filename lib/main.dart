@@ -5,21 +5,22 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:hack_time/extensions.dart';
 import 'package:hack_time/screens/home.dart';
-import 'package:hack_time/screens/input/user_inputs.dart';
 import 'package:hack_time/screens/navigation.dart';
 import 'package:hack_time/screens/onboarding.dart';
 import 'package:hack_time/screens/questions.dart';
-import 'package:hack_time/screens/reduce.dart';
 import 'package:hack_time/screens/signup.dart';
 import 'package:hack_time/secrets/secrets.dart';
 import 'package:hack_time/utils/screen_height.dart';
 
 
+final model = GenerativeModel(
+  model: 'gemini-1.5-flash-latest',
+  apiKey: geminiKey,
+  systemInstruction: Content.system(systemInstruction)
+);
+
 void main() {
-  final model = GenerativeModel(
-    model: 'gemini-1.5-flash-latest',
-    apiKey: geminiKey,
-  );
+
   runApp(const MyApp());
 }
 
@@ -54,8 +55,6 @@ class _MyAppState extends State<MyApp> {
         routes: {
           "/": (_)=> HomeScreen(),
           "/signUp" : (_) => SignupScreen(),
-          "/reduce" : (_)=> const ReduceEmissionScreen(),
-          "/userInputs": (_) => const UserInputs(),
           "/onboarding": (_) => const OnboardingScreen(),
           "/questions": (_) => QuestionsScreen(),
           "/navigation": (_) => NavigationScreen()

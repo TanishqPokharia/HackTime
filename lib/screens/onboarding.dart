@@ -24,7 +24,7 @@ class OnboardingScreen extends HookWidget {
       body: SafeArea(
         child: IntroductionScreen(
           pages: onboardingScreenList,
-          done: Text("Done"),
+          done: Text("Done",style: context.textTheme.titleLarge!.copyWith(color: Colors.green),),
           next: Text("Next",style: context.textTheme.titleLarge!.copyWith(color: Colors.green),),
           skip: Text("Skip",style: context.textTheme.titleLarge!.copyWith(color: Colors.green),),
           dotsDecorator: DotsDecorator(
