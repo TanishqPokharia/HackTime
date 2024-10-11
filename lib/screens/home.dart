@@ -36,41 +36,60 @@ class HomeScreen extends ConsumerWidget {
             children: [
               Padding(
                 padding: EdgeInsets.all(20.rs),
-                child: Card(
-                  color: Colors.greenAccent.shade100.withOpacity(0.7),
-                  child: Padding(
-                    padding: EdgeInsets.all(30.rs),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(30.rs),
+                      child:  CircularPercentIndicator(
+                            percent: 0.8,
+                            radius: 140.rs,
+                            animation: true,
+                            animateFromLastPercent: true,
+                            animationDuration: 1000,
+                            progressColor: Colors.greenAccent,
+                            backgroundColor: Colors.green.withOpacity(0.5),
+                        center: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text("Welcome back, Ashutosh !",style: context.textTheme.titleMedium!.copyWith(
-                              fontWeight: FontWeight.bold
-                            ),),
-                            Text("Rank 7 of 1000")
+                            Text("Welcome back, Ahutosh !"),
+                            Text("85%",style: context.textTheme.headlineMedium!.copyWith(fontWeight: FontWeight.bold),),
+                            Text("data")
                           ],
                         ),
-                        Column(
-                          spacing: 10.rs,
-                          children: [
-                            CircularPercentIndicator(
-                              percent: 0.8,
-                              radius: 30.rs,
-                              animation: true,
-                              animateFromLastPercent: true,
-                              animationDuration: 1000,
-                              progressColor: Colors.greenAccent,
-                              backgroundColor: Colors.green.withOpacity(0.5),
-                              center: Text("85"),
-                            ),
-                            Text("Your Eco Score")
-                          ],
-                        )
-                      ],
+                                ),
+                      // child: Row(
+                      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      //   children: [
+                      //     Column(
+                      //       crossAxisAlignment: CrossAxisAlignment.start,
+                      //       children: [
+                      //         Text("Welcome back, Ashutosh !",style: context.textTheme.titleMedium!.copyWith(
+                      //           fontWeight: FontWeight.bold
+                      //         ),),
+                      //         Text("Rank 7 of 1000")
+                      //       ],
+                      //     ),
+                      //     Column(
+                      //       spacing: 10.rs,
+                      //       children: [
+                      //         CircularPercentIndicator(
+                      //           percent: 0.8,
+                      //           radius: 30.rs,
+                      //           animation: true,
+                      //           animateFromLastPercent: true,
+                      //           animationDuration: 1000,
+                      //           progressColor: Colors.greenAccent,
+                      //           backgroundColor: Colors.green.withOpacity(0.5),
+                      //           center: Text("85"),
+                      //         ),
+                      //         Text("Your Eco Score")
+                      //       ],
+                      //     )
+                      //   ],
+                      // ),
                     ),
-                  ),
+                  ],
                 ),
               ),
               Padding(
